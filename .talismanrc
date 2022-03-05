@@ -1,8 +1,12 @@
 fileignoreconfig:
 - filename: src/utilities.ts
   checksum: 9818e86de70f0cc3b53637d76f81c4f4e4304cac136e881e7985d4c1765896da
+- filename: tests/compareJson.test.ts
+  checksum: c0b5cc4038fcd4106a79586b277e4641e6a4c600ac4a470ff63608eca5765d85
+- filename: tests/mergeJson.test.ts
+  checksum: 8e61f15f4da7b795d0f93b4ab855175f48b9e21ef77b15b932ac616d90f12711
 - filename: tests/utilities.test.ts
   checksum: 8af635f51d094bb80c85574bcd6c1b31368780fd41ded57b7b98d23cd95d704a
 - filename: yarn.lock
-  checksum: 62aba1c8b70714d226a8a4a836be995b7c94bf46a9afe48b9e50180853218f11
+  checksum: 9ba7734739401cf9e2312b04e2393038c8d4462a83f595a9bd9980a4e44801b2
 version: "1.0"
