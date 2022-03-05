@@ -1,4 +1,8 @@
 fileignoreconfig:
+- filename: src/utilities.ts
+  checksum: 9818e86de70f0cc3b53637d76f81c4f4e4304cac136e881e7985d4c1765896da
+- filename: tests/utilities.test.ts
+  checksum: 8af635f51d094bb80c85574bcd6c1b31368780fd41ded57b7b98d23cd95d704a
 - filename: yarn.lock
   checksum: 62aba1c8b70714d226a8a4a836be995b7c94bf46a9afe48b9e50180853218f11
 version: "1.0"
