@@ -12,5 +12,5 @@ export const mergeJson = ({ destinationFile, missingDataFile, outputFile }: Merg
 
   const mergedData = { ...destinationData, ...missingData };
 
-  return fse.writeJsonSync(outputFile, mergedData);
+  return fse.outputJSONSync(outputFile, mergedData);
 };

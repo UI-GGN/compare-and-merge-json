@@ -2,10 +2,12 @@ import fse from 'fs-extra';
 import { compareJson } from '../src';
 
 describe('compare json', () => {
-  const testDataFolder = './tests/compare-data';
-  const sourceFile = testDataFolder + '/source.json';
-  const destinationFile = testDataFolder + '/destination.json';
-  const missingDataFile = testDataFolder + '/missingData.json';
+  const testInputFolder = './tests/compare-input-data';
+  const testOutputFolder = './tests/compare-output-data';
+
+  const sourceFile = testInputFolder + '/source.json';
+  const destinationFile = testInputFolder + '/destination.json';
+  const missingDataFile = testOutputFolder + '/missingData.json';
 
   const sourceData = { key1: 'value1', key2: 'value2' };
   const destinationData = { key1: 'value1', key3: 'value3' };
@@ -17,7 +19,8 @@ describe('compare json', () => {
   });
 
   afterEach(() => {
-    fse.removeSync(testDataFolder);
+    fse.removeSync(testInputFolder);
+    fse.removeSync(testOutputFolder);
   });
 
   it('should write missing source data from destination data into a file', () => {

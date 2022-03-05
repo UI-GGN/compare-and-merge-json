@@ -13,5 +13,5 @@ export const compareJson = ({ sourceFile, destinationFile, missingDataFile }: Co
 
   const missingData = getMissingData(sourceData, destinationData);
 
-  fse.writeJsonSync(missingDataFile, missingData);
+  fse.outputJSONSync(missingDataFile, missingData);
 };

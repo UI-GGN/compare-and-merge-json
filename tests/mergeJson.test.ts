@@ -2,10 +2,11 @@ import fse from 'fs-extra';
 import { mergeJson } from '../src';
 
 describe('merge json', () => {
-  const testDataFolder = './tests/merge-data';
-  const destinationFile = testDataFolder + '/destination.json';
-  const missingDataFile = testDataFolder + '/missingData.json';
-  const outputFile = testDataFolder + '/output.json';
+  const testInputFolder = './tests/merge-input-data';
+  const testOutputFolder = './tests/merge-output-data';
+  const destinationFile = testInputFolder + '/destination.json';
+  const missingDataFile = testInputFolder + '/missingData.json';
+  const outputFile = testOutputFolder + '/output.json';
 
   const destinationData = { key1: 'value1', key3: 'value3' };
   const missingData = { key2: 'value2' };
@@ -17,7 +18,8 @@ describe('merge json', () => {
   });
 
   afterEach(() => {
-    fse.removeSync(testDataFolder);
+    fse.removeSync(testInputFolder);
+    fse.removeSync(testOutputFolder);
   });
 
   it('should write merged source data and missing data into a file', () => {
