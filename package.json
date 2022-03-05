@@ -7,10 +7,12 @@
   "scripts": {
     "build": "tsc",
     "test": "jest --config jestconfig.json",
+    "format-check": "prettier --check \"src/**/*.{ts,js}\"",
     "format": "prettier --write \"src/**/*.{ts,js}\"",
     "lint": "tslint -p tsconfig.json",
+    "lint-fix": "tslint -p tsconfig.json --fix",
     "preversion" : "npm run test",
-    "version" : "npm run format && npm run lint",
+    "version" : "npm run format-check && npm run lint",
     "postversion" : "git push && git push --tags"
   },
   "repository": {
