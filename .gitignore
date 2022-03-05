@@ -1,5 +1,8 @@
-# IntelliJ
+# IntelliJ project files
 .idea
 
-# Javascript
+# Javascript & Typescript dependencies
 node_modules
+
+# build output folder
+build

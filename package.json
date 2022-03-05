@@ -2,9 +2,16 @@
   "name": "compare-and-merge-json",
   "version": "1.0.0",
   "description": "Tool to compare two json files, get the difference and merge the files.",
-  "main": "index.js",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "build": "tsc",
+    "test": "jest --config jestconfig.json",
+    "format": "prettier --write \"src/**/*.{ts,js}\"",
+    "lint": "tslint -p tsconfig.json",
+    "preversion" : "npm run test",
+    "version" : "npm run format && npm run lint",
+    "postversion" : "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -20,5 +27,17 @@
   "bugs": {
     "url": "https://github.com/UI-GGN/compare-and-merge-json/issues"
   },
-  "homepage": "https://github.com/UI-GGN/compare-and-merge-json#readme"
+  "homepage": "https://github.com/UI-GGN/compare-and-merge-json#readme",
+  "files": [
+    "build/**/*"
+  ],
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1",
+    "prettier": "^2.5.1",
+    "ts-jest": "^27.1.3",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.6.2"
+  }
 }
