@@ -1,4 +1,6 @@
 fileignoreconfig:
+- filename: CONTRIBUTING.md
+  checksum: 02f13c6486f7e4f581ed3bdebb79f358a54828b80f9e7e35304c7a1f7e14c34a
 - filename: src/utilities.ts
   checksum: 9818e86de70f0cc3b53637d76f81c4f4e4304cac136e881e7985d4c1765896da
 - filename: tests/compareJson.test.ts
